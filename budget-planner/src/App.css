@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 .App h1{
   text-align: center;
+  background-image: linear-gradient(rgb(0, 217, 255), rgb(1, 168, 197));
+  margin: 0px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+html{
+  background-color: rgb(239, 253, 255);
+}
+
+@media all and (max-width: 375px) {
+  .App h1{
+    font-size: 28px;
+  }
 }

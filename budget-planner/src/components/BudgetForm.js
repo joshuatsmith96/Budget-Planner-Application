@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import './BudgetForm.css';
-import AlertBox from './AlertBox/AlertBox';
 
 const BudgetForm = () => {
     //Temporarily stored
     const [expense, setExpense] = useState("");
     const [cost, setCost] = useState(0);
-    const [error, setError] = useState(3);
 
     //Stored in an array
     const [fullExpenses, setFullExpenses] = useState([]);
@@ -19,6 +17,15 @@ const BudgetForm = () => {
     function handleSubmit(e) {
         e.preventDefault();
 
+        if (expense === ""){
+            alert("Please enter an expense")
+        } else if (!isNaN(expense)){
+            alert("No numbers")
+        } else if (cost === "" || cost === 0){
+            alert("Please enter a cost")
+        } else {
+            document.getElementById("focusMe").focus();
+
             const newFullExpense = {
                 id: "FE" + new Date().getTime(),
                 expense: expense,
@@ -30,7 +37,7 @@ const BudgetForm = () => {
             setFullExpenses([...fullExpenses].concat(newFullExpense))
             setExpense("")
             setCost("")
-
+        }
     }
 
     function deleteExpense(id, number) {
@@ -44,7 +51,7 @@ const BudgetForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="inputs">
                     <label>Expense</label>
-                    <input type="text" onChange={(e) => setExpense(e.target.value)} value={expense}></input>
+                    <input id="focusMe" type="text" onChange={(e) => setExpense(e.target.value)} value={expense}></input>
                 </div>
                 <div className="inputs">
                     <label>Cost</label>
