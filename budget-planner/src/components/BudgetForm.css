@@ -15,7 +15,7 @@
     background-color: #ececec;
     box-shadow: 4px 8px 6px -5px;
     color: gray;
-    width: 75%;
+    width: 320px;
     margin-bottom: 30px;
 }
 
@@ -61,6 +61,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .total p{
@@ -71,13 +72,14 @@
     background-color: green;
     box-shadow: 1px 6px 6px -5px;
     color: white;
+    z-index: 1;
 }
 
 .expenseContainer{
     padding: 10px;
     display: flex;
     flex-direction: row;
-    width: 75%;
+    width: 320px;
     justify-content: space-between;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -92,6 +94,7 @@
     color: white;
     border: none;
     border-radius: 10px;
+    z-index: 2;
 }
 
 .expenseText{
@@ -100,4 +103,33 @@
 
 .expenseText div:nth-child(2){
     color: rgb(29, 196, 29);
+}
+
+@media all and (min-width: 978px) {
+    .BudgetForm form{
+        width: 500px;
+        padding: 20px;
+    }
+
+    .inputs label{
+        font-size: 25px;
+    }
+
+    .total p{
+        font-size: 20px;
+        width: 300px;
+    }
+
+    .expenseContainer{
+        width: 500px;
+        padding: 20px;
+    }
+
+    .expenseText{
+        font-size: 20px;
+    }
+
+    .BudgetForm form button{
+        font-size: 20px;
+    }
 }
