@@ -60,11 +60,15 @@ const BudgetForm = () => {
                 <button type="submit" className="expenseButton">Add Expense</button>
             </form>
                 {fullExpenses.map((fullExpense) => <div key={fullExpense.id} className="expenseContainer">
-                    <div>{"Expense: " + fullExpense.expense}</div>
-                    <div>{"Cost: $" + fullExpense.number}</div>
+                    <div className = "expenseText">
+                        <div>{fullExpense.expense}</div>
+                        <div>{"$"+fullExpense.number}</div>
+                    </div>
                     <button onClick={() => deleteExpense(fullExpense.id, fullExpense.number)}>Delete</button>
                 </div>)}
-            <div className="total">Total: ${totalCost}</div>
+            <div className="total">
+                <p>Total: ${totalCost}</p>
+            </div>
         </div>
     )
 }

@@ -1,129 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
-
-.BudgetForm {
+.BudgetForm{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.BudgetForm div{
-    font-family: 'Manrope', sans-serif;
-    font-weight: bold;
 }
 
 .BudgetForm form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 90%;
-}
-
-.total{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Manrope', sans-serif;
-    width: 100%;
-    background-image: linear-gradient(rgb(239, 253, 255), rgb(149, 232, 243));
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ececec;
+    box-shadow: 4px 8px 6px -5px;
+    color: gray;
+    width: 75%;
+    margin-bottom: 30px;
 }
 
 .BudgetForm form button{
     border: none;
-    padding: 6px;
-    font-family: 'Manrope', sans-serif;
-    color: white;
-    border-radius: 4px;
-}
-
-.BudgetForm button{
-    margin-bottom: 10px;
-    font-weight: bold;
-    background-color: green;
-    font-family: 'Manrope', sans-serif;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    padding: 8px;
+    background-color: rgb(18, 218, 18);
+    color: black;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
 }
 
 .inputs{
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
     justify-content: space-between;
-    width: 250px;
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
 }
 
 .inputs label{
-    font-size: 16px;
-    font-family: 'Manrope', sans-serif;
-    font-weight: bold;
+
 }
 
-.inputs:first-child{
-    margin-top: 10px;
+.inputs input{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border: solid;
+    border-width: thin;
+}
+
+.total{
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total p{
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: green;
+    box-shadow: 1px 6px 6px -5px;
+    color: white;
 }
 
 .expenseContainer{
-    width: 90%;
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-shadow: 1px 1px 4px 1px;
-    color: rgb(8, 44, 49);
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
     margin-bottom: 20px;
-}
-
-.expenseContainer div{
-    color: black;
+    border-radius: 10px;
+    background-color: #ececec;
+    box-shadow: 4px 8px 6px -5px;
+    color: gray;
 }
 
 .expenseContainer button{
+    padding: 15px;
     background-color: red;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
     color: white;
-    margin-top: 6px;
+    border: none;
+    border-radius: 10px;
 }
 
-@media all and (min-width: 320px) {
-    .inputs label{
-        font-size: 18px;
-    }
-
-    .inputs{
-        width: 280px;
-    }
-
-    .BudgetForm button{
-        font-size: 15px;
-    }
+.expenseText{
+    color: black;
 }
 
-@media all and (min-width: 375px) {
-    .inputs label{
-        font-size: 23px;
-    }
-
-    .inputs{
-        width: 340px;
-    }
-
-    .BudgetForm button{
-        font-size: 20px;
-    }
-
-    .total{
-        font-size: 25px;
-    }
-
-    .inputs input{
-        font-size: 18px;
-    }
-    
+.expenseText div:nth-child(2){
+    color: rgb(29, 196, 29);
 }
